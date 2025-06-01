@@ -110,8 +110,13 @@
         </section>
         <section class="card">
             <h2 id="contact">Contact Me</h2>
-            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+                action="/thank-you.html">
+                <!-- Anti-spam honeypot field -->
+                <input type="hidden" name="form-name" value="contact" />
+                <p style="display:none">
+                    <label>Don’t fill this out: <input name="bot-field" /></label>
+                </p>
 
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required><br>
@@ -124,6 +129,7 @@
 
                 <button type="submit">Submit</button>
             </form>
+
 
         </section>
     </main>
