@@ -1,0 +1,223 @@
+/* ====== Base Reset & Root Colors ====== */
+:root {
+  --primary-color: #0C134F;
+  --secondary-color: #5C469C;
+  --light-color: #D4ADFC;
+  --dark-color: #1D267D;
+  --text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* ====== Navigation ====== */
+header {
+  background-color: var(--dark-color);
+  padding: 1rem;
+  position: relative;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nav .logo img {
+  border-radius: 50%;
+  width: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.nav h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: none; /* Hidden by default on mobile */
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav ul.open {
+  display: flex;
+}
+
+.nav ul li {
+  margin: 0.5rem 0;
+}
+
+.nav ul li a {
+  color: var(--light-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ====== Toggle Button for Mobile ====== */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: block;
+  cursor: pointer;
+}
+
+/* ====== Main Content ====== */
+main {
+  margin-top: 2rem;
+}
+
+main section {
+  margin-bottom: 2rem;
+}
+
+h2, h3 {
+  color: var(--light-color);
+  margin-bottom: 0.5rem;
+}
+
+ul, ol {
+  margin-left: 1.5rem;
+}
+
+/* ====== Form Styling ====== */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  background-color: var(--light-color);
+  border: none;
+  color: var(--dark-color);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c49cf0;
+}
+
+a, button {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--dark-color);
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ====== Media Queries ====== */
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav h1 {
+    margin: 0;
+  }
+
+  .nav ul {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+
+  .nav h1 {
+    font-size: 2rem;
+  }
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  b
+  
+  /* ====== Card Style ====== */
+.card {
+  background-color: var(--dark-color);
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(212, 173, 252, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  margin-bottom: 2rem;
+}
+
+/* Zoom + Tilt on Hover */
+.card:hover {
+  transform: perspective(800px) rotateY(5deg) scale(1.03);
+  box-shadow: 0 10px 25px rgba(212, 173, 252, 0.4);
+}
+
+/* Section Titles Hover Animation */
+.card h2, .card h3 {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.card h2:hover, .card h3:hover {
+  transform: rotateZ(-2deg) scale(1.05);
+}
+}
+
+.card:hover {
+  box-shadow:
+    0 0 10px rgba(212, 173, 252, 0.2),
+    0 0 20px rgba(212, 173, 252, 0.3);
+}
+
